@@ -18,7 +18,7 @@ public class Main {
         try {
             // Login 処理
             JDA jda = JDABuilder.createLight(TOKEN, GatewayIntent.GUILD_MESSAGES, GatewayIntent.DIRECT_MESSAGES)
-                    .addEventListeners()
+                    .addEventListeners(new SlashCommandListener())
                     .setActivity(Activity.playing("作業")) // "～をプレイ中" の ～の部分
                     .build();
 

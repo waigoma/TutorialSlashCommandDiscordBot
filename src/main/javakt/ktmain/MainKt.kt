@@ -17,7 +17,7 @@ class MainKt {
         try {
             // Login 処理
             val jda = JDABuilder.createLight(TOKEN, GatewayIntent.GUILD_MESSAGES, GatewayIntent.DIRECT_MESSAGES)
-                .addEventListeners()
+                .addEventListeners(SlashCommandListener())
                 .setActivity(Activity.playing("作業")) // "～をプレイ中" の ～の部分
                 .build()
 
